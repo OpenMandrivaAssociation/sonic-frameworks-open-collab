@@ -66,13 +66,19 @@ Development files (Headers etc.) for %{name}.
 
 Qt library that implements the Open Collaboration Services API
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+rm -rf %{buildroot}/%{_libdir}/pkgconfig
+
 %files
 %{_datadir}/qlogging-categories6/*
 
 %files -n %{devname}
 %{_includedir}/KF6/Attica
-%{_libdir}/cmake/KF6Attica
-%{_libdir}/pkgconfig/KF6Attica.pc
+
+# pending rename
+# %{_libdir}/cmake/KF6Attica
+# %{_libdir}/pkgconfig/KF6Attica.pc
 
 %files -n %{libname}
 %{_libdir}/libKF6Attica.so*
