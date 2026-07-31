@@ -8,7 +8,7 @@
 #define git 20240217
 
 Name: sonic-frameworks-open-collab
-Version: 6.26.0
+Version: 6.28.0
 Release: %{?git:0.%{git}.}1
 URL: https://github.com/Sonic-DE/sonic-frameworks-open-collab
 Source0: %url/archive/%version/%name-%version.tar.gz
