@@ -8,7 +8,7 @@
 #define git 20240217
 
 Name: sonic-frameworks-open-collab
-Version: 6.28.0
+Version: 6.30.0
 Release: %{?git:0.%{git}.}1
 URL: https://github.com/Sonic-DE/sonic-frameworks-open-collab
 Source0: %url/archive/%version/%name-%version.tar.gz
@@ -66,19 +66,13 @@ Development files (Headers etc.) for %{name}.
 
 Qt library that implements the Open Collaboration Services API
 
-%install -a
-rm -rf %{buildroot}/%{_libdir}/cmake
-rm -rf %{buildroot}/%{_libdir}/pkgconfig
-
 %files
 %{_datadir}/qlogging-categories6/*
 
 %files -n %{devname}
 %{_includedir}/KF6/Attica
-
-# pending rename
-# %{_libdir}/cmake/KF6Attica
-# %{_libdir}/pkgconfig/KF6Attica.pc
+%{_libdir}/cmake/KF6Attica
+%{_libdir}/pkgconfig/KF6Attica.pc
 
 %files -n %{libname}
 %{_libdir}/libKF6Attica.so*
